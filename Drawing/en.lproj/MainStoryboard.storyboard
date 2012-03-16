@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NNe-Vt-VsW" customClass="CustomButton">
-                                <rect key="frame" x="124" y="118" width="72" height="37"/>
+                                <rect key="frame" x="20" y="112" width="130" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal">
@@ -29,24 +29,91 @@
                                     <action selector="buttonReleased:" destination="Q9x-wh-rTD" eventType="touchUpInside" id="ANO-KV-Djk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Custom Button using drawRect" lineBreakMode="tailTruncation" minimumFontSize="10" id="xWb-f1-0FP">
-                                <rect key="frame" x="41" y="36" width="239" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iR2-k7-K8l" customClass="CustomButton">
+                                <rect key="frame" x="170" y="112" width="130" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Q9x-wh-rTD" eventType="touchDown" id="uWY-F1-aTI"/>
+                                    <action selector="buttonReleased:" destination="Q9x-wh-rTD" eventType="touchUpInside" id="zxe-t9-JAz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Custom Buttons using drawRect" lineBreakMode="tailTruncation" minimumFontSize="10" id="xWb-f1-0FP">
+                                <rect key="frame" x="36" y="33" width="248" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="drv-tZ-TDV" customClass="CustomButton">
+                                <rect key="frame" x="20" y="236" width="130" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Q9x-wh-rTD" eventType="touchDown" id="wwS-74-4SS"/>
+                                    <action selector="buttonReleased:" destination="Q9x-wh-rTD" eventType="touchUpInside" id="cOG-an-GDA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ueE-hN-XR4" customClass="CustomButton">
+                                <rect key="frame" x="170" y="236" width="130" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Q9x-wh-rTD" eventType="touchDown" id="dBY-TE-SdT"/>
+                                    <action selector="buttonReleased:" destination="Q9x-wh-rTD" eventType="touchUpInside" id="G5X-bv-sJw"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="customButton" destination="NNe-Vt-VsW" id="oDR-QR-nw8"/>
+                        <outlet property="customButton1" destination="NNe-Vt-VsW" id="Tns-Ne-TZX"/>
+                        <outlet property="customButton2" destination="iR2-k7-K8l" id="CfE-Lj-KA5"/>
+                        <outlet property="customButton3" destination="drv-tZ-TDV" id="fQw-Rc-h1M"/>
+                        <outlet property="customButton4" destination="ueE-hN-XR4" id="GWp-b7-FkU"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="205" y="11"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CustomButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomButton.h"/>
+        </class>
+        <class className="DrawingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:" candidateClass="CustomButton"/>
+                <relationship kind="action" name="buttonReleased:" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="customButton1" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="customButton2" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="customButton3" candidateClass="CustomButton"/>
+                <relationship kind="outlet" name="customButton4" candidateClass="CustomButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

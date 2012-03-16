@@ -9,30 +9,40 @@
 #import "DrawingViewController.h"
 
 @implementation DrawingViewController
-@synthesize customButton = _customButton;
+@synthesize customButton1 = _customButton1;
+@synthesize customButton2 = _customButton2;
+@synthesize customButton3 = _customButton3;
+@synthesize customButton4 = _customButton4;
+
 
 - (void)viewDidLoad
 {
-    self.customButton.frame = CGRectMake(95,100,130,100);
-    self.customButton.gradientColor = [UIColor blueColor];
-    UIImage *buttonIcon = [UIImage imageNamed:@"picture-17747.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:buttonIcon];
-    imageView.frame = CGRectMake(40,10,50,50);
-    [self.customButton addSubview:imageView];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self.view addSubview:self.customButton];
+    [self createButtons];
+    [self.view addSubview:self.customButton1];
+    [self.view addSubview:self.customButton2];
+    [self.view addSubview:self.customButton3];
+    [self.view addSubview:self.customButton4];
 }
 
 - (IBAction)buttonPressed:(CustomButton *)sender
 {
-    self.customButton.gradientColor = [UIColor redColor];
-    [self.customButton setNeedsDisplay];
+    [sender becomeBigger];
 }
 
 - (IBAction)buttonReleased:(CustomButton *)sender
 {
-    self.customButton.gradientColor = [UIColor blueColor];
-    [self.customButton setNeedsDisplay];
+    [sender becomeSmaller];
+}
+- (void)createButtons
+{
+    [self.customButton1 setFrame:CGRectMake(20,112,130,100)];
+    [self.customButton1 addIcon:[UIImage imageNamed:@"picture-17747.png"]];
+    [self.customButton2 setFrame:CGRectMake(170,112,130,100)];
+    [self.customButton2 addIcon:[UIImage imageNamed:@"Mailbox.png"]];
+    [self.customButton3 setFrame:CGRectMake(20,236,130,100)];
+    [self.customButton3 addIcon:[UIImage imageNamed:@"india.png"]];
+    [self.customButton4 setFrame:CGRectMake(170,236,130,100)];
+    [self.customButton4 addIcon:[UIImage imageNamed:@"canada.png"]];
 }
 
 @end

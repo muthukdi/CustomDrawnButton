@@ -11,10 +11,13 @@
 
 @interface DrawingViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet CustomButton *customButton;
+@property (weak, nonatomic) IBOutlet CustomButton *customButton1;
+@property (weak, nonatomic) IBOutlet CustomButton *customButton2;
+@property (weak, nonatomic) IBOutlet CustomButton *customButton3;
+@property (weak, nonatomic) IBOutlet CustomButton *customButton4;
 
 - (IBAction)buttonPressed:(CustomButton *)sender;
 - (IBAction)buttonReleased:(CustomButton *)sender;
-
+- (void)createButtons;
 
 @end

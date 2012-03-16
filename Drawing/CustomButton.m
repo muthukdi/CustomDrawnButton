@@ -7,18 +7,22 @@
 //
 
 #import "CustomButton.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation CustomButton
 
 @synthesize gradientColor = _gradientColor;
+@synthesize iconView = _iconView;
+@synthesize icon = _icon;
 
 - (UIColor *)gradientColor
 {
     if (_gradientColor) return _gradientColor;
     else
     {
-        _gradientColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+        _gradientColor = [UIColor colorWithRed:0 green:0 blue:255 alpha:1];
         return _gradientColor;
+        
     }
 }
 - (void)drawRect:(CGRect)rect
@@ -33,31 +37,47 @@
             [self drawPointAt:x andAt:y usingContext:context usingColor:lineColor];
         }
     }
-    [self drawBorder:self.gradientColor usingContext:context];
-}
-- (void)drawBorder:(UIColor *)color usingContext:(CGContextRef)context
-{
-    for (int x = 0; x < self.frame.size.width; x++)
-    {
-        [self drawPointAt:x andAt:0 usingContext:context usingColor:color];
-    }
-    for (int x = 0; x < self.frame.size.width; x++)
-    {
-        [self drawPointAt:x andAt:self.frame.size.height-1 usingContext:context usingColor:color];
-    }
-    for (int y = 0; y < self.frame.size.height; y++)
-    {
-        [self drawPointAt:0 andAt:y usingContext:context usingColor:color];
-    }
-    for (int y = 0; y < self.frame.size.height; y++)
-    {
-        [self drawPointAt:self.frame.size.width-1 andAt:y usingContext:context usingColor:color];
-    }
+    self.layer.borderColor = self.gradientColor.CGColor;
+    self.layer.borderWidth = 1.0;
+    self.layer.cornerRadius = 10.0f;
+    self.layer.masksToBounds = YES;
+    self.layer.borderWidth = 1.0f;
 }
 - (void)drawPointAt:(int)x andAt:(int)y usingContext:(CGContextRef)context usingColor:(UIColor *)color
 {
     CGContextSetFillColorWithColor(context, color.CGColor);
     CGContextFillRect(context,CGRectMake(x, y, 1, 1));
+}
+- (void)addIcon:(UIImage *)icon
+{
+    self.icon = icon;
+    CGFloat width = self.icon.size.width;
+    CGFloat height = self.icon.size.height;
+    self.iconView = [[UIImageView alloc] initWithImage:self.icon];
+    self.iconView.frame = CGRectMake((130-width)/2,10,width,height);
+    [self addSubview:self.iconView];
+}
+- (void)becomeBigger
+{
+    self.gradientColor = [UIColor redColor];
+    CGFloat width = self.icon.size.width;
+    CGFloat height = self.icon.size.height;
+    CGFloat buttonX = self.frame.origin.x;
+    CGFloat buttonY = self.frame.origin.y;
+    self.frame = CGRectMake(buttonX-2,buttonY-2,134,104);
+    self.iconView.frame = CGRectMake((130-width)/2,10,width+4,height+4);
+    [self setNeedsDisplay];
+}
+- (void)becomeSmaller
+{
+    self.gradientColor = [UIColor blueColor];
+    CGFloat width = self.icon.size.width;
+    CGFloat height = self.icon.size.height;
+    CGFloat buttonX = self.frame.origin.x;
+    CGFloat buttonY = self.frame.origin.y;
+    self.frame = CGRectMake(buttonX+2,buttonY+2,130,100);
+    self.iconView.frame = CGRectMake((130-width)/2,10,width,height);
+    [self setNeedsDisplay];
 }
 
 @end

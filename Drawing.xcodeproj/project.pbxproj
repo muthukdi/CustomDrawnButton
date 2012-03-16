@@ -17,6 +17,9 @@
 		9832859D150B3C2D0034E924 /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832859C150B3C2D0034E924 /* DrawingViewController.m */; };
 		983285A5150B511A0034E924 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 983285A4150B511A0034E924 /* CustomButton.m */; };
 		98CB7DC01512A4B000F236C5 /* picture-17747.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CB7DBF1512A4B000F236C5 /* picture-17747.png */; };
+		98CB7DCB1512EC8500F236C5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CB7DCA1512EC8500F236C5 /* QuartzCore.framework */; };
+		98CB7DDB1513337D00F236C5 /* India.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CB7DDA1513337D00F236C5 /* India.png */; };
+		98CB7DDD1513341000F236C5 /* canada.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CB7DDC1513341000F236C5 /* canada.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		983285A3150B511A0034E924 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		983285A4150B511A0034E924 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		98CB7DBF1512A4B000F236C5 /* picture-17747.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture-17747.png"; sourceTree = "<group>"; };
+		98CB7DCA1512EC8500F236C5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		98CB7DDA1513337D00F236C5 /* India.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = India.png; sourceTree = "<group>"; };
+		98CB7DDC1513341000F236C5 /* canada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canada.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98CB7DCB1512EC8500F236C5 /* QuartzCore.framework in Frameworks */,
 				98328587150B3C2D0034E924 /* UIKit.framework in Frameworks */,
 				98328589150B3C2D0034E924 /* Foundation.framework in Frameworks */,
 				9832858B150B3C2D0034E924 /* CoreGraphics.framework in Frameworks */,
@@ -55,6 +62,8 @@
 		98328577150B3C2D0034E924 = {
 			isa = PBXGroup;
 			children = (
+				98CB7DDC1513341000F236C5 /* canada.png */,
+				98CB7DDA1513337D00F236C5 /* India.png */,
 				98CB7DBF1512A4B000F236C5 /* picture-17747.png */,
 				9832858C150B3C2D0034E924 /* Drawing */,
 				98328585150B3C2D0034E924 /* Frameworks */,
@@ -73,6 +82,7 @@
 		98328585150B3C2D0034E924 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				98CB7DCA1512EC8500F236C5 /* QuartzCore.framework */,
 				98328586150B3C2D0034E924 /* UIKit.framework */,
 				98328588150B3C2D0034E924 /* Foundation.framework */,
 				9832858A150B3C2D0034E924 /* CoreGraphics.framework */,
@@ -159,6 +169,8 @@
 				98328591150B3C2D0034E924 /* InfoPlist.strings in Resources */,
 				9832859A150B3C2D0034E924 /* MainStoryboard.storyboard in Resources */,
 				98CB7DC01512A4B000F236C5 /* picture-17747.png in Resources */,
+				98CB7DDB1513337D00F236C5 /* India.png in Resources */,
+				98CB7DDD1513341000F236C5 /* canada.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
